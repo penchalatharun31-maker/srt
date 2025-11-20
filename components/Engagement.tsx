@@ -41,7 +41,7 @@ const Engagement: React.FC = () => {
         } else if (connectedPlatforms.length === 0) {
             setActivePlatform('');
         }
-    }, [brandProfile, activePlatform]);
+    }, [brandProfile?.linkedInConnected, brandProfile?.instagramConnected, brandProfile?.twitterConnected]);
 
     useEffect(() => {
         if (activePlatform) {
